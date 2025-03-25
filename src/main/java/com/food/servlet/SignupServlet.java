@@ -1,0 +1,74 @@
+package com.food.servlet;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.food.dao.UserDAO;
+import com.food.daoImpl.UserDAOImpl;
+import com.food.model.User;
+
+@WebServlet("/signup")
+public class SignupServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+    private UserDAO userDAO;
+
+    @Override
+    public void init() {
+        userDAO = new UserDAOImpl();
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        String username = request.getParameter("username");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String phone = request.getParameter("phone");
+        String address = request.getParameter("address");
+        String role = "Customer"; // Default role for new users
+        
+        // Validate input
+        if (name == null || username == null || email == null || password == null || phone == null || address == null ||
+            name.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || phone.isEmpty() || address.isEmpty()) {
+            request.setAttribute("error", "All fields are required.");
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
+            return;
+        }
+
+        // Check if username already exists
+        if (userDAO.getUserByUsername(username) != null) {
+            request.setAttribute("error", "Username is already taken. Please choose another.");
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
+            return;
+        }
+
+        // Password strength check (at least 6 characters)
+        if (password.length() < 6) {
+            request.setAttribute("error", "Password must be at least 6 characters long.");
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
+            return;
+        }
+
+        // Create user object
+        User newUser = new User(0, name, username, password, email, phone, address, role);
+        
+        try {
+            userDAO.addUser(newUser);
+            request.setAttribute("message", "Signup successful! Please log in.");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        } catch (Exception e) {
+            e.printStackTrace();
+            request.setAttribute("error", "Something went wrong. Please try again later.");
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
+        }
+    }
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "GET method is not supported for signup.");
+    }
+
+}

@@ -1,0 +1,62 @@
+/* Header Glow Effect */
+    .glow-effect {
+        box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.5);
+    }
+    
+    /* Header Styling */
+    .navbar {
+        background: #121212;
+        padding: 12px 0;
+    }
+    .navbar-brand {
+        font-size: 32px;
+        font-weight: bold;
+        color: #FFD700 !important;
+        font-family: 'Great Vibes', cursive;
+        display: flex;
+        align-items: center;
+    }
+    .navbar-brand img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid #FFD700;
+        transition: transform 0.5s ease-in-out;
+    }
+    .navbar-brand img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #FFD700;
+    }
+    .nav-link {
+        color: #FFD700 !important;
+        font-size: 18px;
+        font-family: 'Inter', sans-serif;
+        margin: 0 12px;
+        transition: 0.3s;
+    }
+    .nav-link:hover {
+        color: #fff !important;
+        transform: scale(1.1);
+    }
+    .btn-login {
+        background: #FFD700;
+        color: #121212;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+        border-radius: 20px;
+        padding: 6px 15px;
+        transition: all 0.3s;
+    }
+    .btn-login:hover {
+        background: #fff;
+        color: #121212;
+    }
+    .navbar-toggler {
+        border: none;
+        color: #FFD700;
+        outline: none;
+        font-size: 24px;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }

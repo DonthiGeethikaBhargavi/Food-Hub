@@ -5,23 +5,22 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
- private static final String URL = "jdbc:mysql://localhost:3306/fooddeliveryapp";
- private static final String USERNAME="root";
- private static final String PASSWORD="root";
-  public static Connection getConnection() {
-	 Connection connection = null;
-	 try {
-		 Class.forName("com.mysql.cj.jdbc.Driver");
-		 connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-	 }
-	 catch(ClassNotFoundException e) {
-		 e.printStackTrace();
-		 
-	 } catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	 return connection;
- }
- 
+    private static final String URL = System.getenv("DB_URL");
+    private static final String USERNAME = System.getenv("DB_USER");
+    private static final String PASSWORD = System.getenv("DB_PASS");
+
+    public static Connection getConnection() {
+        Connection connection = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        } catch (ClassNotFoundException e) {
+            System.err.println("Database Driver not found!");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            System.err.println("Database Connection Failed!");
+            e.printStackTrace();
+        }
+        return connection;
+    }
 }

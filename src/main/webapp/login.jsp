@@ -18,51 +18,53 @@
 <body>
 
 <!-- Header -->
-<div class="header d-flex justify-content-between align-items-center px-3">
-    <div class="d-flex align-items-center">
+<header class="header">
+    <div class="logo-container">
         <img src="images/FoodHubLogo.jpg" alt="Food Hub Logo">
-        <span class="ms-2">Food Hub</span>
+        <span>Food Hub</span>
     </div>
-    <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="Home">Home</a></li>
-    </ul>
-</div>
+    <nav>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="Home">Home</a></li>
+        </ul>
+    </nav>
+</header>
 
+<!-- Login Form Container -->
+<div class="login-wrapper">
+    <div class="login-container">
+        <h2><i class="fa fa-user-circle"></i> Login</h2>
 
+        <%-- Display error message if login fails --%>
+        <% String errorMessage = (String) request.getAttribute("error"); %>
+        <% if (errorMessage != null) { %>
+            <div class="alert alert-danger"><%= errorMessage %></div>
+        <% } %>
 
-<!-- Login Form -->
-<div class="login-container">
-    <h2><i class="fa fa-user-circle"></i> Login</h2>
+        <form action="LoginServlet" method="post">
+            <div class="mb-3">
+                <label for="username" class="form-label"><i class="fa fa-user"></i> Username</label>
+                <input type="text" id="username" name="username" class="form-control" required>
+            </div>
 
-    <%-- Display error message if login fails --%>
-    <% String errorMessage = (String) request.getAttribute("error"); %>
-    <% if (errorMessage != null) { %>
-        <div class="alert alert-danger"><%= errorMessage %></div>
-    <% } %>
+            <div class="mb-3">
+                <label for="password" class="form-label"><i class="fa fa-lock"></i> Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
 
-    <form action="LoginServlet" method="post">
-        <div class="mb-3">
-            <label for="username" class="form-label"><i class="fa fa-user"></i> Username</label>
-            <input type="text" id="username" name="username" class="form-control" required>
+            <button type="submit" class="btn btn-primary btn-login"><i class="fa fa-sign-in-alt"></i> Login</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <p>Don't have an account? <a href="signup.jsp" class="btn btn-signup">Signup</a></p>
         </div>
-
-        <div class="mb-3">
-            <label for="password" class="form-label"><i class="fa fa-lock"></i> Password</label>
-            <input type="password" id="password" name="password" class="form-control" required>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-login"><i class="fa fa-sign-in-alt"></i> Login</button>
-    </form>
-
-    <div class="text-center mt-3">
-        <p>Don't have an account? <a href="signup.jsp" class="btn btn-signup">Signup</a></p>
     </div>
 </div>
 
 <!-- Footer -->
-<div class="footer">
+<footer class="footer">
     &copy; 2025 <span>Food Hub</span>. All Rights Reserved.
-</div>
+</footer>
 
 <!-- Bootstrap & jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

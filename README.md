@@ -16,19 +16,14 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
 
 
 
-### 🔑 Login & Signup
-- **User Registration:** Customers and restaurant admins can register.
-- **Secure Login:** Password authentication with hashing.
-- **Session Management:** Users remain logged in until they log out manually.
-- **Role-Based Access:** Customers can order, and restaurant admins can manage menus and orders.
-
-
-
-### 🏡 Post-Login Homepage
-After login:
-- **Customers** see recommended dishes, trending restaurants, and exclusive offers.
-- **Restaurant Admins** see order statistics, new orders, and menu management options.
-
+### 🔐 User Authentication (Login & Signup)  
+- Users can **sign up** for an account.  
+- **Login** allows users to access their personalized dashboard.  
+- After logging in, the navbar displays:  
+  - 👤 User's Name  
+  - 📜 Order History  
+  - 🛒 Cart  
+  - 🚪 Logout Button  
 
 
 ### 🍽️ Menu Selection Flow

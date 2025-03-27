@@ -10,63 +10,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
 
-    <!-- Header -->
-<div class="header d-flex justify-content-between align-items-center px-3">
-    <div class="d-flex align-items-center">
+<!-- Header -->
+<header class="header">
+    <div class="logo-container">
         <img src="images/FoodHubLogo.jpg" alt="Food Hub Logo">
-        <span class="ms-2">Food Hub</span>
+        <span>Food Hub</span>
     </div>
-    <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="Home">Home</a></li>
-    </ul>
+    <nav>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="Home">Home</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Signup Form -->
+<div class="signup-wrapper">
+    <div class="signup-container">
+        <h2><i class="fa fa-user-plus"></i> Sign Up</h2>
+
+        <%-- Display error message if signup fails --%>
+        <% String errorMessage = (String) request.getAttribute("error"); %>
+        <% if (errorMessage != null) { %>
+            <div class="alert alert-danger"><%= errorMessage %></div>
+        <% } %>
+
+        <form action="SignupServlet" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label"><i class="fa fa-user"></i> Full Name</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="username" class="form-label"><i class="fa fa-user"></i> Username</label>
+                <input type="text" id="username" name="username" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label"><i class="fa fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label"><i class="fa fa-lock"></i> Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label"><i class="fa fa-phone"></i> Phone Number</label>
+                <input type="text" id="phone" name="phone" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="address" class="form-label"><i class="fa fa-map-marker-alt"></i> Address</label>
+                <textarea id="address" name="address" class="form-control" rows="2" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-signup"><i class="fa fa-user-plus"></i> Join</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <p>Already have an account? <a href="login.jsp" class="btn btn-login"><i class="fa fa-sign-in-alt"></i> Login</a></p>
+        </div>
+    </div>
 </div>
 
-    <!-- Signup Form -->
-    <div class="signup-container">
-        <h2>
-            <img src="https://cdn-icons-png.flaticon.com/128/1046/1046784.png" alt="food icon">
-            Welcome to Food Hub
-            <img src="https://cdn-icons-png.flaticon.com/128/3595/3595458.png" alt="Pizza" class="header-img">
-            <img src="https://cdn-icons-png.flaticon.com/128/3075/3075977.png" alt="Milkshake" class="header-img">
-        </h2>
-        <form action="signup" method="post">
-            <div class="mb-3">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
-            </div>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" id="username" name="username" class="form-control" placeholder="Choose a username" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" name="password" class="form-control" placeholder="Create a password" required>
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
-            </div>
-            <div class="mb-3">
-                <label for="address" class="form-label">Address</label>
-                <textarea id="address" name="address" class="form-control" placeholder="Enter your address" rows="2" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-signup w-100">Join the Feast</button>
-        </form>
-        <p class="link-text">Already have an account? <a href="login.jsp" class="btn btn-login">Log In</a></p>
-    </div>
+<!-- Footer -->
+<footer class="footer">
+    &copy; 2025 <span>Food Hub</span>. All Rights Reserved.
+</footer>
 
-    <!-- Footer -->
-    <div class="footer">
-        &copy; 2025 Food Hub | All Rights Reserved
-    </div>
+<!-- Bootstrap & jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

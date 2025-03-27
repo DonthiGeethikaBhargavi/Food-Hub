@@ -8,6 +8,13 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
 ---
 
 ## 🌟 Features
+✅ **User Authentication** (Login & Signup) 🔑  
+✅ **View & Order Food** from various restaurants 🍕  
+✅ **Add to Cart & Dynamic Cart Summary** 🛒  
+✅ **Order History & Order Tracking** 📜    
+✅ **Secure Payment Modes** (UPI, Cash, Cards) 💳  
+✅ **Responsive UI & Interactive Design** 🎨  
+✅ **Custom Error Handling & Global Exception Handling** ⚠️
 
 ### 🏠 Homepage Navigation
 - Browse **restaurants** and **menus** effortlessly.
@@ -55,10 +62,15 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
 
 
 ### ⚠️ Smart Error Handling
-- **Global Exception Handling**: Implemented using Servlet Filters.
-- **404 - Page Not Found**: Redirects to a custom error page when a URL is invalid.
-- **500 - Internal Server Error**: Displays a friendly error page instead of a raw stack trace.
-- **Centralized Error Logging**: Captures errors and forwards them to `error.jsp`.
+1️⃣ **Global Exception Handling (`GlobalExceptionFilter.java`)**  
+   - Captures all unhandled exceptions.  
+   - Redirects users to a **user-friendly error page** (`error.jsp`).  
+   - Handles **404 (Not Found)** & **500 (Internal Server Error)** automatically.  
+
+2️⃣ **Custom Error Handler (`CustomErrorHandler.java`)**  
+   - Extracts & displays detailed error messages.  
+   - Forwards errors to a **styled error page**.  
+   - Ensures **consistent error responses** across the application.  
 
 
 
@@ -178,6 +190,8 @@ CREATE TABLE menu (
 - 🔹 **Restaurant Owner Verification**
 - 🔹 **Payment Gateway Integration**
 - 🔹 **User Reviews & Ratings**
+- 🔹 **Live Order Tracking** 🚴 
+- 🔹  **Coupon & Discount System**
 - 🔹 **Enhanced UI with animations**
 
 ---

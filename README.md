@@ -11,7 +11,7 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
 ✅ **User Authentication** (Login & Signup) 🔑  
 ✅ **View & Order Food** from various restaurants 🍕  
 ✅ **Add to Cart & Dynamic Cart Summary** 🛒  
-✅ **Order History  📜    
+✅ **Order History** 📜    
 ✅ **Secure Payment Modes** (UPI, Cash, Cards) 💳  
 ✅ **Responsive UI & Interactive Design** 🎨  
 ✅ **Custom Error Handling & Global Exception Handling** ⚠️

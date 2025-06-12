@@ -3,7 +3,7 @@
 ## 🚀 Overview
 Welcome to **Food Hub**, a full-stack web application designed for a seamless online food ordering experience! Users can explore restaurants, browse menus, add items to their cart, and securely place orders.
 
-> Built using **JDBC, JSP, Servlets, CSS, JavaScript, Bootstrap, jQuery, and the DAO pattern**.
+> Built using **JDBC, JSP, SQL, Servlets, CSS, JavaScript, Bootstrap, jQuery, and the DAO pattern**.
 
 ---
 

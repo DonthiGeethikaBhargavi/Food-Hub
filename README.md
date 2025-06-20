@@ -1,7 +1,7 @@
 # 🥡🍜 FOOD HUB 🍛🥤 - Online Food Ordering System
 
 ## 🚀 Overview
-Welcome to **Food Hub**, a full-stack web application designed for a seamless online food ordering experience! Users can explore restaurants, browse menus, add items to their cart, and securely place orders.
+Welcome to **Food Hub**, a full-stack web application designed for a seamless online food ordering experience! Built from the ground up, this project allows users to explore restaurants, browse menus, add items to their cart, and securely place orders.
 
 > Built using **JDBC, JSP, SQL, Servlets, CSS, JavaScript, Bootstrap, jQuery, and the DAO pattern**.
 
@@ -144,8 +144,8 @@ CREATE TABLE menu (
 ✅ **Backend:** Java (JDBC, Servlets, JSP)  
 ✅ **Frontend:** HTML, CSS, JavaScript, Bootstrap, jQuery  
 ✅ **Database:** MySQL  
-✅ **Security:** Password hashing for authentication  
-✅ **Error Handling:** Servlet Filters for exceptions  
+✅ **Web Server:** Apache Tomcat
+✅ ** Design Pattern:** Data Access Object (DAO)  
 
 ---
 
@@ -181,18 +181,21 @@ CREATE TABLE menu (
 ---
 
 ## 🔐 Security
-- **Password Hashing**: Secure user authentication.
-- **Unique Order ID Generation**: Ensures security and tracking.
+- Password Hashing: User passwords are not stored in plaintext. We use a strong one-way hashing algorithm (e.g., SHA-256 or BCrypt) to secure credentials against database breaches.
+- SQL Injection Prevention: All database queries are executed using PreparedStatements, which prevents malicious SQL injection attacks by safely parameterizing user input.
+- Session Management: Secure user sessions are managed after login to ensure that authenticated routes and user-specific data (like the cart and order history) are protected.
+- Cross-Site Scripting (XSS) Prevention: User inputs are properly escaped before being rendered on pages to prevent XSS attacks.
+- Unique & Non-Sequential Order IDs: Generating unique, non-sequential Order IDs helps protect order data from enumeration attacks where a malicious user could guess other valid order IDs.
 
 ---
 
 ## 🚀 Future Enhancements
-- 🔹 **Restaurant Owner Verification**
-- 🔹 **Payment Gateway Integration**
-- 🔹 **User Reviews & Ratings**
-- 🔹 **Live Order Tracking** 🚴 
-- 🔹  **Coupon & Discount System**
-- 🔹 **Enhanced UI with animations**
+- 🔹Restaurant Owner Dashboard: A dedicated interface for restaurant owners to manage their menu, view orders, and update restaurant details.
+- 🔹 Real Payment Gateway Integration: Integrate with a service like Stripe or Razorpay for actual transaction processing.
+- 🔹 User Reviews & Ratings: Allow users to rate and review restaurants and menu items.
+- 🔹 Live Order Tracking: A map-based interface to track the delivery agent's location in real-time. 🚴
+- 🔹 Coupon & Discount System: Implement functionality for applying promotional codes at checkout.
+- 🔹 Enhanced UI/UX: Introduce modern animations, micro-interactions, and a more dynamic user interface.
 
 ---
 

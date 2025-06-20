@@ -181,21 +181,21 @@ CREATE TABLE menu (
 ---
 
 ## 🔐 Security
-- Password Hashing: User passwords are not stored in plaintext. We use a strong one-way hashing algorithm (e.g., SHA-256 or BCrypt) to secure credentials against database breaches.
-- SQL Injection Prevention: All database queries are executed using PreparedStatements, which prevents malicious SQL injection attacks by safely parameterizing user input.
-- Session Management: Secure user sessions are managed after login to ensure that authenticated routes and user-specific data (like the cart and order history) are protected.
-- Cross-Site Scripting (XSS) Prevention: User inputs are properly escaped before being rendered on pages to prevent XSS attacks.
-- Unique & Non-Sequential Order IDs: Generating unique, non-sequential Order IDs helps protect order data from enumeration attacks where a malicious user could guess other valid order IDs.
+- **Password Hashing:** User passwords are not stored in plaintext. We use a strong one-way hashing algorithm (e.g., SHA-256 or BCrypt) to secure credentials against database breaches.
+- **SQL Injection Prevention:** All database queries are executed using PreparedStatements, which prevents malicious SQL injection attacks by safely parameterizing user input.
+- **Session Management:** Secure user sessions are managed after login to ensure that authenticated routes and user-specific data (like the cart and order history) are protected.
+- **Cross-Site Scripting (XSS) Prevention:** User inputs are properly escaped before being rendered on pages to prevent XSS attacks.
+- **Unique & Non-Sequential Order IDs:** Generating unique, non-sequential Order IDs helps protect order data from enumeration attacks where a malicious user could guess other valid order IDs.
 
 ---
 
 ## 🚀 Future Enhancements
-- 🔹Restaurant Owner Dashboard: A dedicated interface for restaurant owners to manage their menu, view orders, and update restaurant details.
-- 🔹 Real Payment Gateway Integration: Integrate with a service like Stripe or Razorpay for actual transaction processing.
-- 🔹 User Reviews & Ratings: Allow users to rate and review restaurants and menu items.
-- 🔹 Live Order Tracking: A map-based interface to track the delivery agent's location in real-time. 🚴
-- 🔹 Coupon & Discount System: Implement functionality for applying promotional codes at checkout.
-- 🔹 Enhanced UI/UX: Introduce modern animations, micro-interactions, and a more dynamic user interface.
+- 🔹**Restaurant Owner Dashboard:** A dedicated interface for restaurant owners to manage their menu, view orders, and update restaurant details.
+- 🔹 **Real Payment Gateway Integration:** Integrate with a service like Stripe or Razorpay for actual transaction processing.
+- 🔹 **User Reviews & Ratings:** Allow users to rate and review restaurants and menu items.
+- 🔹 **Live Order Tracking:** A map-based interface to track the delivery agent's location in real-time. 🚴
+- 🔹 **Coupon & Discount System:** Implement functionality for applying promotional codes at checkout.
+- 🔹 **Enhanced UI/UX:** Introduce modern animations, micro-interactions, and a more dynamic user interface.
 
 ---
 

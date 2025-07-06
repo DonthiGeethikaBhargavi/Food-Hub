@@ -38,7 +38,7 @@
             <div class="alert alert-danger"><%= errorMessage %></div>
         <% } %>
 
-        <form action="SignupServlet" method="post">
+        <form action="signup" method="post">
             <div class="mb-3">
                 <label for="name" class="form-label"><i class="fa fa-user"></i> Full Name</label>
                 <input type="text" id="name" name="name" class="form-control" required>

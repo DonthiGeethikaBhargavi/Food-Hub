@@ -80,9 +80,9 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
 The application is powered by **MySQL**. Below is the **schema structure**:
 
 ### 📌 Tables
-#### **1️⃣ `users`** (Stores user details)
+#### **1️⃣ `User`** (Stores user details)
 ```sql
-CREATE TABLE users (
+CREATE TABLE User (
     UserId INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL,
     Username VARCHAR(50) UNIQUE NOT NULL,
@@ -92,15 +92,15 @@ CREATE TABLE users (
     Address TEXT,
     Role ENUM('Customer', 'RestaurantAdmin', 'SystemAdmin') NOT NULL,
     CreatedDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    LastLoginDate TIMESTAMP
+    LastLoginDate TIMESTAMP NULL
 );
 ```
 
-#### **2️⃣ `restaurants`** (Stores restaurant information)
+#### **2️⃣ `Restaurant`** (Stores restaurant information)
 ```sql
-CREATE TABLE restaurants (
-    RestaurantId INT PRIMARY KEY AUTO_INCREMENT,
-    Name VARCHAR(100) UNIQUE NOT NULL,
+CREATE TABLE Restaurant (
+    RestaurantId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL UNIQUE,
     Address TEXT NOT NULL,
     Rating DECIMAL(3,2) DEFAULT 0.00,
     CuisineType VARCHAR(100),
@@ -109,32 +109,70 @@ CREATE TABLE restaurants (
     AdminUserId INT UNIQUE,
     ImagePath VARCHAR(255)
 );
+
 ```
 
-#### **3️⃣ `orders`** (Stores order details)
+#### **4️⃣ `Menu`** (Stores restaurant menus)
 ```sql
-CREATE TABLE orders (
-    OrderId VARCHAR(20) PRIMARY KEY,
-    UserId INT NOT NULL,
-    RestaurantId INT NOT NULL,
-    OrderDate DATETIME,
-    TotalAmount DECIMAL(10,2) NOT NULL,
-    Status ENUM('Pending', 'Delivered', 'Cancelled', 'In Progress') NOT NULL DEFAULT 'Pending',
-    PaymentMode ENUM('UPI', 'Cash', 'Debit Card', 'Credit Card') NOT NULL
-);
-```
-
-#### **4️⃣ `menu`** (Stores restaurant menus)
-```sql
-CREATE TABLE menu (
+CREATE TABLE Menu (
     MenuId INT PRIMARY KEY AUTO_INCREMENT,
     RestaurantId INT NOT NULL,
     ItemName VARCHAR(100) NOT NULL,
     Description TEXT,
     Price DECIMAL(10,2) NOT NULL,
     Ratings DECIMAL(3,2) DEFAULT 0.00,
-    IsAvailable TINYINT(1) DEFAULT 1,
-    ImagePath VARCHAR(255)
+    IsAvailable BOOLEAN DEFAULT TRUE,
+    ImagePath VARCHAR(255),
+    UNIQUE (RestaurantId, ItemName),
+    FOREIGN KEY (RestaurantId) REFERENCES Restaurant(RestaurantId)
+);
+```
+
+#### **3️⃣ `OrderTable`** (Stores order details)
+```sql
+CREATE TABLE OrderTable (
+    OrderId VARCHAR(20) PRIMARY KEY,
+    UserId INT NOT NULL,
+    RestaurantId INT NOT NULL,
+    OrderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    TotalAmount DECIMAL(10,2) NOT NULL,
+    Status ENUM('Pending', 'Delivered', 'Cancelled', 'In Progress') NOT NULL DEFAULT 'Pending',
+    PaymentMode ENUM('UPI', 'Cash', 'Debit Card', 'Credit Card') NOT NULL,
+    FOREIGN KEY (UserId) REFERENCES User(UserId),
+    FOREIGN KEY (RestaurantId) REFERENCES Restaurant(RestaurantId)
+);
+
+```
+
+#### **4️⃣ `OrderItem`** (Stores OrderItem)
+```sql
+CREATE TABLE OrderItem (
+    OrderItemId INT PRIMARY KEY AUTO_INCREMENT,
+    OrderId VARCHAR(20) NOT NULL,
+    MenuId INT NOT NULL,
+    Quantity INT NOT NULL CHECK (Quantity > 0),
+    TotalPrice DECIMAL(10,2) NOT NULL,
+    UNIQUE (OrderId, MenuId),
+    FOREIGN KEY (OrderId) REFERENCES OrderTable(OrderId),
+    FOREIGN KEY (MenuId) REFERENCES Menu(MenuId)
+);
+```
+
+#### **4️⃣ `OrderHistory`** (Stores OrderHistory)
+```sql
+CREATE TABLE OrderHistory (
+    OrderHistoryID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT,
+    OrderID VARCHAR(20),
+    OrderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    TotalAmount DECIMAL(10,2),
+    Status ENUM('Delivered', 'Cancelled', 'Returned') NOT NULL,
+    RestaurantID INT,
+    RestaurantName VARCHAR(20),
+    MenuItems TEXT,
+    FOREIGN KEY (UserID) REFERENCES User(UserID),
+    FOREIGN KEY (OrderID) REFERENCES OrderTable(OrderID),
+    FOREIGN KEY (RestaurantID) REFERENCES Restaurant(RestaurantId)
 );
 ```
 

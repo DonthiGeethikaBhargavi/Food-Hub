@@ -16,6 +16,42 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
 ✅ **Responsive UI & Interactive Design** 🎨  
 ✅ **Custom Error Handling & Global Exception Handling** ⚠️
 
+
+### 👤 Customer Features
+✅ **User Authentication** (Login & Signup) 🔑  
+✅ **Browse Restaurants & Menus** 🍽️  
+✅ **Add to Cart & Dynamic Cart Summary** 🛒  
+✅ **Order Placement & History** 📦  
+✅ **Secure Payment Modes** 💳  
+✅ **Responsive UI & Interactive Design** 📱  
+
+### 🧑‍🍳 Restaurant Owner Features
+✅ **Owner Dashboard**  
+✅ **Add / Edit / Delete Menu Items**  
+✅ **View Restaurant Orders**  
+✅ **Update Menu Availability**  
+
+### 🛡️ Admin Features
+✅ **Admin Login & Session Management**  
+✅ **Admin Dashboard for Platform Monitoring**  
+✅ **Manage Restaurant Admins (Add/Edit/Delete)**  
+✅ **Deactivate Restaurants / Remove Orders** 
+
+
+### ⚠️ Smart Error Handling
+1️⃣ **Global Exception Handling (`GlobalExceptionFilter.java`)**  
+   - Captures all unhandled exceptions.  
+   - Redirects users to a **user-friendly error page** (`error.jsp`).  
+   - Handles **404 (Not Found)** & **500 (Internal Server Error)** automatically.  
+
+2️⃣ **Custom Error Handler (`CustomErrorHandler.java`)**  
+   - Extracts & displays detailed error messages.  
+   - Forwards errors to a **styled error page**.  
+   - Ensures **consistent error responses** across the application.  
+
+
+## 🗺️ Navigation Flow
+
 ### 🏠 Homepage Navigation
 - Browse **restaurants** and **menus** effortlessly.
 - Click on a **menu item** to see all restaurants serving that dish.
@@ -59,19 +95,13 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
 - Unique **Order ID** generated for each order.
 - View ordered items, total amount, and payment details.
 
+---
 
+## 📊 Entity-Relationship (ER) Diagram
 
-### ⚠️ Smart Error Handling
-1️⃣ **Global Exception Handling (`GlobalExceptionFilter.java`)**  
-   - Captures all unhandled exceptions.  
-   - Redirects users to a **user-friendly error page** (`error.jsp`).  
-   - Handles **404 (Not Found)** & **500 (Internal Server Error)** automatically.  
+The following diagram illustrates the relationship between all the tables in the **Food Hub** database:
 
-2️⃣ **Custom Error Handler (`CustomErrorHandler.java`)**  
-   - Extracts & displays detailed error messages.  
-   - Forwards errors to a **styled error page**.  
-   - Ensures **consistent error responses** across the application.  
-
+![ER Diagram](https://github.com/user-attachments/assets/1b11eb8e-f43f-40e9-9539-98ebe8a90f23)<img width="1420" height="1577" alt="Screenshot 2025-07-16 113558" src="https://github.com/user-attachments/assets/b552c382-c5f5-4ea3-b0a1-88f1d7450dcb" />
 
 
 ---
@@ -228,7 +258,6 @@ CREATE TABLE OrderHistory (
 ---
 
 ## 🚀 Future Enhancements
-- 🔹**Restaurant Owner Dashboard:** A dedicated interface for restaurant owners to manage their menu, view orders, and update restaurant details.
 - 🔹 **Real Payment Gateway Integration:** Integrate with a service like Stripe or Razorpay for actual transaction processing.
 - 🔹 **User Reviews & Ratings:** Allow users to rate and review restaurants and menu items.
 - 🔹 **Live Order Tracking:** A map-based interface to track the delivery agent's location in real-time. 🚴

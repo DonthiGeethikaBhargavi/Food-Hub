@@ -1,0 +1,141 @@
+/* General Styling */
+/* Sets a clean, minimalistic font and background color for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fixed Header */
+/* Makes the header fixed at the top, with a shadow effect for better visibility */
+header {
+    background: white;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Prevents page content from being hidden under the fixed header */
+.header-spacing {
+    height: 80px;
+}
+
+/* Navbar */
+/* Aligns navigation links properly and adds spacing */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Adds spacing between navbar items */
+.navbar-nav .nav-item {
+    margin: 0 8px;
+}
+
+/* Ensures login/logout buttons adjust well on smaller screens */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .login-btn, .logout-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+    }
+}
+
+/* Logo Animation */
+/* Styles the logo container to align elements properly */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styles the logo image and applies a rotating animation */
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: rotateLogo 5s linear infinite;
+}
+
+/* Defines the animation for rotating the logo continuously */
+@keyframes rotateLogo {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Styles the Food Hub text logo with a custom font */
+.logo-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Hero Section */
+/* Styles the main hero section with proper height and alignment */
+.hero-section {
+    width: 100%;
+    height: calc(100vh - 80px); /* Adjusts height considering the fixed header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+/* Styles the hero image with rounded corners and responsive width */
+.hero-img {
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 20px;
+}
+
+/* Section Spacing */
+/* Adds spacing between sections to maintain a clean layout */
+.section-spacing {
+    padding-top: 80px;
+}
+
+/* Menu & Restaurant Cards */
+/* Provides a smooth transition effect on hover for better user experience */
+.card {
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Adds a hover effect to elevate the cards slightly for a dynamic feel */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Circular Menu Images */
+/* Ensures all menu images have a uniform circular shape */
+.fixed-menu-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Square Restaurant Images */
+/* Ensures restaurant images have a consistent size and rounded edges */
+.fixed-restaurant-img {
+    width: 100%;
+    height: 315px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Footer */
+/* Styles the footer section with a dark background and white text */
+.footer-section {
+    background: black;
+    color: white;
+    padding: 20px;
+}

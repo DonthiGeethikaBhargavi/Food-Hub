@@ -101,7 +101,7 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
 
 The following diagram illustrates the relationship between all the tables in the **Food Hub** database:
 
-![ER Diagram](https://github.com/user-attachments/assets/1b11eb8e-f43f-40e9-9539-98ebe8a90f23)<img width="1420" height="1577" alt="Screenshot 2025-07-16 113558" src="https://github.com/user-attachments/assets/b552c382-c5f5-4ea3-b0a1-88f1d7450dcb" />
+![ER Diagram]<img width="1420" height="1577" alt="Screenshot 2025-07-16 113558" src="https://github.com/user-attachments/assets/b552c382-c5f5-4ea3-b0a1-88f1d7450dcb" />
 
 
 ---

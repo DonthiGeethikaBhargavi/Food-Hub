@@ -1,4 +1,4 @@
-# 🥡🍜 FOOD HUB 🍛🥤 - Online Food Ordering System
+# <img src="https://media.tenor.com/_dx22I6xU1UAAAAM/chinese-food.gif" width="50px"/> <img src="assets/ramen.gif" width="50px"/> FOOD HUB <img src="https://gifdb.com/images/high/curry-498-x-372-gif-bxhni5ywf2989l4w.gif" width="50px"/> <img src="https://i.pinimg.com/originals/a0/99/5a/a0995a974b6c6a0d48fbdcc41d6c28a6.gif" width="50px"/> - Online Food Ordering System
 
 ## 🚀 Overview
 Welcome to **Food Hub**, a full-stack web application designed for a seamless online food ordering experience! Built from the ground up, this project allows users to explore restaurants, browse menus, add items to their cart, and securely place orders.

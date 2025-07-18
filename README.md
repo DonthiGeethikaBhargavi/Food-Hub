@@ -1,4 +1,18 @@
-# <img src="https://media.tenor.com/_dx22I6xU1UAAAAM/chinese-food.gif" width="50px"/> <img src="Food-Hub-main/src/main/webapp/images/ramen.gif" Height= "900px" width="50px"/> FOOD HUB <img src="https://gifdb.com/images/high/curry-498-x-372-gif-bxhni5ywf2989l4w.gif" width="50px"/> <img src="https://i.pinimg.com/originals/a0/99/5a/a0995a974b6c6a0d48fbdcc41d6c28a6.gif" width="50px"/> - Online Food Ordering System
+<p align="center">
+
+  <!-- GIFs before text -->
+  <img src="https://media.tenor.com/_dx22I6xU1UAAAAM/chinese-food.gif" height="50" style="vertical-align: middle; margin-right: 12px;" alt="Chinese Food" />
+  <img src="Food-Hub-main/src/main/webapp/images/ramen.gif" height="50" style="vertical-align: middle; margin-right: 12px;" alt="Ramen" />
+
+  <!-- Typing SVG text -->
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=3000&pause=800&color=FF5722&center=true&vCenter=true&width=450&lines=FOOD+HUB;Online+Food+Ordering+System" alt="Typing SVG" style="vertical-align: middle;" />
+
+  <!-- GIFs after text -->
+  <img src="https://gifdb.com/images/high/curry-498-x-372-gif-bxhni5ywf2989l4w.gif" height="50" style="vertical-align: middle; margin-left: 12px;" alt="Curry" />
+  <img src="https://i.pinimg.com/originals/a0/99/5a/a0995a974b6c6a0d48fbdcc41d6c28a6.gif" height="50" style="vertical-align: middle; margin-left: 12px;" alt="Juice" />
+
+</p>
+
 
 ## 🚀 Overview
 Welcome to **Food Hub**, a full-stack web application designed for a seamless online food ordering experience! Built from the ground up, this project allows users to explore restaurants, browse menus, add items to their cart, and securely place orders.

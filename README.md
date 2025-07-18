@@ -279,7 +279,6 @@ CREATE TABLE OrderHistory (
 - 🔹 **Enhanced UI/UX:** Introduce modern animations, micro-interactions, and a more dynamic user interface.
 
 ---
-
 ## 👨‍💻 Author
 📌 **Donthi Geethika Bhargavi**  
 

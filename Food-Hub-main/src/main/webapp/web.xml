@@ -10,12 +10,17 @@
         <servlet-class>com.food.servlet.Home</servlet-class>
     </servlet>
 
+    <!-- Map to both root and /Home -->
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
         <url-pattern>/Home</url-pattern>
     </servlet-mapping>
 
-    <!-- Default Welcome Servlet -->
+    <!-- Set welcome file to servlet root path -->
     <welcome-file-list>
         <welcome-file>Home</welcome-file>
     </welcome-file-list>

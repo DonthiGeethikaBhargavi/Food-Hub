@@ -71,6 +71,8 @@ The platform also features dedicated dashboards for **restaurant owners** to man
 
 ## 🗺️ Navigation Flow
 
+### 👤🍽️ Customer Navigation Flow
+
 ### 🏠 Homepage Navigation
 - Browse **restaurants** and **menus** effortlessly.
 - Click on a **menu item** to see all restaurants serving that dish.
@@ -113,6 +115,36 @@ The platform also features dedicated dashboards for **restaurant owners** to man
 ### ✅ Order Confirmation
 - Unique **Order ID** generated for each order.
 - View ordered items, total amount, and payment details.
+
+### 🧑‍🍳 Restaurant Owner Navigation Flow
+
+- After logging in as a **Restaurant Owner**, the user is redirected to the **Owner Dashboard**.
+- The dashboard provides access to the following functionalities:
+  - ➕ **Add Menu Item**: Add new dishes with name, description, price, availability, and image.
+  - ✏️ **Edit Menu Item**: Modify existing menu details dynamically.
+  - ❌ **Delete Menu Item**: Remove items that are no longer available.
+  - 👁️ **View Orders**: Track incoming and completed orders for their restaurant.
+  - 🔄 **Update Item Availability**: Toggle the availability of menu items (In Stock / Out of Stock).
+- The UI includes validation prompts and user-friendly messages for successful CRUD operations.
+
+---
+
+### 🛡️ Admin Navigation Flow
+
+- Admins log in using a **dedicated Admin Login page**.
+- After login, they are taken to the **Admin Dashboard**, where they can:
+  - 📋 **View Platform Stats**: Total users, restaurants, and order activity.
+  - 👥 **Manage Restaurant Admins**:
+    - ➕ Add new admins and assign them to restaurants.
+    - ✏️ Edit existing admin details.
+    - ❌ Delete or deactivate restaurant admins.
+  - 🏪 **Control Restaurant Listings**:
+    - 🔒 Deactivate/Reactivate restaurants.
+    - 🗑️ Delete restaurants violating terms or policy.
+  - 📦 **Manage Orders Across the Platform**:
+    - View all orders.
+    - Remove invalid or test orders from the system.
+- All operations are protected with proper session handling and form validations.
 
 ---
 

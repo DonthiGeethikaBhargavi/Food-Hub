@@ -18,7 +18,7 @@ FROM tomcat:9.0-jdk8
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
 # Copy the WAR file from the build stage and rename it to ROOT.war
-COPY --from=build /app/target/FoodHub.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=build /app/target/Food-Hub.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose port 8080 for access
 EXPOSE 8080

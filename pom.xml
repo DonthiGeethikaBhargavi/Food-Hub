@@ -64,7 +64,7 @@
     </dependencies>
 
     <build>
-        <finalName>ROOT</finalName>
+        <finalName>FoodHub</finalName>
         <plugins>
             <!-- Maven Compiler Plugin -->
             <plugin>

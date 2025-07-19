@@ -21,7 +21,7 @@
 The platform also features dedicated dashboards for **restaurant owners** to manage their menus and orders, and for **admins** to oversee the entire system, manage restaurant admins, and maintain platform integrity.
 
 
-> 🔧 **Tech Stack:** Built using **Java (JDBC, Servlets, JSP)** for the backend, **MySQL** for database management, and  **CSS, JavaScript, Bootstrap, jQuery** for the frontend. The application follows the **DAO (Data Access Object) design pattern** for clean and modular code architecture.
+> 🔧 **Tech Stack:** Built using **Java** for the backend, **MySQL** for database management, and  **CSS, JavaScript, Bootstrap, jQuery** for the frontend. The application follows the **DAO (Data Access Object) design pattern** for clean and modular code architecture.
 
 
 ---

@@ -193,7 +193,7 @@ CREATE TABLE Restaurant (
 
 ```
 
-#### **4️⃣ `Menu`** (Stores restaurant menus)
+#### **3️⃣ `Menu`** (Stores restaurant menus)
 ```sql
 CREATE TABLE Menu (
     MenuId INT PRIMARY KEY AUTO_INCREMENT,
@@ -209,7 +209,7 @@ CREATE TABLE Menu (
 );
 ```
 
-#### **3️⃣ `OrderTable`** (Stores order details)
+#### **4️⃣ `OrderTable`** (Stores order details)
 ```sql
 CREATE TABLE OrderTable (
     OrderId VARCHAR(20) PRIMARY KEY,
@@ -225,7 +225,7 @@ CREATE TABLE OrderTable (
 
 ```
 
-#### **4️⃣ `OrderItem`** (Stores OrderItem)
+#### **5️⃣  `OrderItem`** (Stores OrderItem)
 ```sql
 CREATE TABLE OrderItem (
     OrderItemId INT PRIMARY KEY AUTO_INCREMENT,
@@ -239,7 +239,7 @@ CREATE TABLE OrderItem (
 );
 ```
 
-#### **4️⃣ `OrderHistory`** (Stores OrderHistory)
+#### **6️⃣ `OrderHistory`** (Stores OrderHistory)
 ```sql
 CREATE TABLE OrderHistory (
     OrderHistoryID INT AUTO_INCREMENT PRIMARY KEY,

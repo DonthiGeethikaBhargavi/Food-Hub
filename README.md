@@ -16,7 +16,7 @@
 
 ## 🚀 Overview
 
-**Food Hub** is a full-stack web application that offers a seamless and intuitive online food ordering experience. It enables customers to explore nearby restaurants, view digital menus, add items to a cart, place secure orders, and track their order history — all in one place.
+**Food Hub** is a full-stack web application that offers a seamless and intuitive online food ordering experience. It enables customers to explore restaurants, view digital menus, add items to a cart, place secure orders, and track their order history — all in one place.
 
 The platform also features dedicated dashboards for **restaurant owners** to manage their menus and orders, and for **admins** to oversee the entire system, manage restaurant admins, and maintain platform integrity.
 

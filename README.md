@@ -1,44 +1,64 @@
-# 🥡🍜 FOOD HUB 🍛🥤 - Online Food Ordering System
+<p align="center">
+  <!-- Left-side GIFs -->
+  <img src="https://media.tenor.com/_dx22I6xU1UAAAAM/chinese-food.gif" height="50" style="vertical-align: middle; margin: 0 10px;" alt="Chinese Food" />
+  <img src="src/main/webapp/images/ramen.gif" height="50" style="vertical-align: middle; margin: 0 10px;" alt="Ramen" />
+
+  <!-- Typing SVG Title -->
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=3000&pause=800&color=FF5722&center=true&vCenter=true&width=500&lines=🍴+FOOD+HUB+🍴;Online+Food+Ordering+System" alt="Typing SVG" style="vertical-align: middle; margin: 0 10px;" />
+
+  <!-- Right-side GIFs -->
+  <img src="https://gifdb.com/images/high/curry-498-x-372-gif-bxhni5ywf2989l4w.gif" height="50" style="vertical-align: middle; margin: 0 10px;" alt="Curry" />
+  <img src="https://i.pinimg.com/originals/a0/99/5a/a0995a974b6c6a0d48fbdcc41d6c28a6.gif" height="50" style="vertical-align: middle; margin: 0 10px;" alt="Juice" />
+</p>
 
 ## 🚀 Overview
-Welcome to **Food Hub**, a full-stack web application designed for a seamless online food ordering experience! Built from the ground up, this project allows users to explore restaurants, browse menus, add items to their cart, and securely place orders.
 
-> Built using **JDBC, JSP, SQL, Servlets, CSS, JavaScript, Bootstrap, jQuery, and the DAO pattern**.
+**Food Hub** is a full-stack web application that offers a seamless and intuitive online food ordering experience. It enables customers to explore restaurants, view digital menus, add items to a cart, place secure orders, and track their order history — all in one place.
+
+The platform also features dedicated dashboards for **restaurant owners** to manage their menus and orders, and for **admins** to oversee the entire system, manage restaurant admins, and maintain platform integrity.
+
+> 🔧 **Key Technologies:** Built using **Java** for the backend, **MySQL** for database management, and  **CSS, JavaScript, Bootstrap, jQuery** for the frontend.
 
 ---
-
 ## 🌟 Features
-✅ **User Authentication** (Login & Signup) 🔑  
-✅ **View & Order Food** from various restaurants 🍕  
-✅ **Add to Cart & Dynamic Cart Summary** 🛒  
-✅ **Order History** 📜    
-✅ **Secure Payment Modes** (UPI, Cash, Cards) 💳  
-✅ **Responsive UI & Interactive Design** 🎨  
-✅ **Custom Error Handling & Global Exception Handling** ⚠️
+
+- ✅ **User Authentication** (Login & Signup) 🔑  
+- ✅ **View & Order Food** from various restaurants 🍕  
+- ✅ **Add to Cart & Dynamic Cart Summary** 🛒  
+- ✅ **Order History** 📜  
+- ✅ **Secure Payment Modes** (UPI, Cash, Cards) 💳  
+- ✅ **Responsive UI & Interactive Design** 🎨  
+- ✅ **Custom Error Handling & Global Exception Handling** ⚠️  
 
 
 ### 👤 Customer Features
-✅ **User Authentication** (Login & Signup) 🔑  
-✅ **Browse Restaurants & Menus** 🍽️  
-✅ **Add to Cart & Dynamic Cart Summary** 🛒  
-✅ **Order Placement & History** 📦  
-✅ **Secure Payment Modes** 💳  
-✅ **Responsive UI & Interactive Design** 📱  
+
+- ✅ **User Authentication** (Login & Signup) 🔑  
+- ✅ **Browse Restaurants & Menus** 🍽️  
+- ✅ **Add to Cart & Dynamic Cart Summary** 🛒  
+- ✅ **Order Placement & History** 📦  
+- ✅ **Secure Payment Modes** 💳  
+- ✅ **Responsive UI & Interactive Design** 📱  
+ 
 
 ### 🧑‍🍳 Restaurant Owner Features
-✅ **Owner Dashboard**  
-✅ **Add / Edit / Delete Menu Items**  
-✅ **View Restaurant Orders**  
-✅ **Update Menu Availability**  
+
+- ✅ **Owner Dashboard**  
+- ✅ **Add / Edit / Delete Menu Items**  
+- ✅ **View Restaurant Orders**  
+- ✅ **Update Menu Availability**  
+ 
 
 ### 🛡️ Admin Features
-✅ **Admin Login & Session Management**  
-✅ **Admin Dashboard for Platform Monitoring**  
-✅ **Manage Restaurant Admins (Add/Edit/Delete)**  
-✅ **Deactivate Restaurants / Remove Orders** 
 
+- ✅ **Admin Login & Session Management**  
+- ✅ **Admin Dashboard for Platform Monitoring**  
+- ✅ **Manage Restaurant Admins (Add/Edit/Delete)**  
+- ✅ **Deactivate Restaurants / Remove Orders**  
+ 
 
 ### ⚠️ Smart Error Handling
+
 1️⃣ **Global Exception Handling (`GlobalExceptionFilter.java`)**  
    - Captures all unhandled exceptions.  
    - Redirects users to a **user-friendly error page** (`error.jsp`).  
@@ -48,16 +68,18 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
    - Extracts & displays detailed error messages.  
    - Forwards errors to a **styled error page**.  
    - Ensures **consistent error responses** across the application.  
-
+  
 
 ## 🗺️ Navigation Flow
+
+### 👤🍽️ Customer Navigation Flow
+
+---
 
 ### 🏠 Homepage Navigation
 - Browse **restaurants** and **menus** effortlessly.
 - Click on a **menu item** to see all restaurants serving that dish.
 - Click on a **restaurant** to view its **entire menu**.
-
-
 
 ### 🔐 User Authentication (Login & Signup)  
 - Users can **sign up** for an account.  
@@ -66,10 +88,13 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
   - 👤 User's Name  
   - 📜 Order History  
   - 🛒 Cart  
-  - 🚪 Logout Button  
+  - 🚪 Logout Button
 
 
 ### 🍽️ Menu Selection Flow
+
+---
+
 #### **Option 1: Select by Dish**
 - Click on a dish (e.g., "Pizza") to see **restaurants serving it**.
 - Choose a restaurant to see its full menu.
@@ -77,32 +102,67 @@ Welcome to **Food Hub**, a full-stack web application designed for a seamless on
 #### **Option 2: Select by Restaurant**
 - Click on a **restaurant** to view all its available dishes.
 
-
+---
 
 ### 🛒 Dynamic Cart Management
 - Add or remove items dynamically.
-- Real-time cart updates .
+- Real-time cart updates.
 
-
+---
 
 ### 💳 Secure Checkout
 - View the order summary before finalizing the order.
 - Choose a preferred **payment mode**.
 
-
+---
 
 ### ✅ Order Confirmation
 - Unique **Order ID** generated for each order.
 - View ordered items, total amount, and payment details.
 
+### 🧑‍🍳 Restaurant Owner Navigation Flow
+
+- After logging in as a **Restaurant Owner**, the user is redirected to the **Owner Dashboard**.
+- The dashboard provides access to the following functionalities:
+
+  - ➕ **Add Menu Item**: Add new dishes with name, description, price, availability, and image.
+  - ✏️ **Edit Menu Item**: Modify existing menu details dynamically.
+  - ❌ **Delete Menu Item**: Remove items that are no longer available.
+  - 👁️ **View Orders**: Track incoming and completed orders for their restaurant.
+  - 🔄 **Update Item Availability**: Toggle the availability of menu items (In Stock / Out of Stock).
+
+- The UI includes **validation prompts** and **user-friendly messages** for successful CRUD operations.
+
+
+---
+### 🛡️ Admin Navigation Flow
+
+- Admins log in using a **dedicated Admin Login page**.
+- After login, they are taken to the **Admin Dashboard**, where they can:
+
+  - 📋 **View Platform Stats**: Total users, restaurants, and order activity.
+
+  - 👥 **Manage Restaurant Admins**:
+    - ➕ Add new admins and assign them to restaurants.
+    - ✏️ Edit existing admin details.
+    - ❌ Delete or deactivate restaurant admins.
+
+  - 🏪 **Control Restaurant Listings**:
+    - 🔒 Deactivate/Reactivate restaurants.
+    - 🗑️ Delete restaurants violating terms or policy.
+
+  - 📦 **Manage Orders Across the Platform**:
+    - View all orders.
+    - Remove invalid or test orders from the system.
+
+- All operations are protected with **proper session handling** and **form validations**.
+
 ---
 
 ## 📊 Entity-Relationship (ER) Diagram
-
 The following diagram illustrates the relationship between all the tables in the **Food Hub** database:
 
-![ER Diagram]<img width="1420" height="1577" alt="Screenshot 2025-07-16 113558" src="https://github.com/user-attachments/assets/b552c382-c5f5-4ea3-b0a1-88f1d7450dcb" />
-
+<img width="1420" height="1577" alt="Screenshot 2025-07-16 113558" src="https://github.com/user-attachments/assets/b552c382-c5f5-4ea3-b0a1-88f1d7450dcb" />
 
 ---
 
@@ -142,7 +202,7 @@ CREATE TABLE Restaurant (
 
 ```
 
-#### **4️⃣ `Menu`** (Stores restaurant menus)
+#### **3️⃣ `Menu`** (Stores restaurant menus)
 ```sql
 CREATE TABLE Menu (
     MenuId INT PRIMARY KEY AUTO_INCREMENT,
@@ -158,7 +218,7 @@ CREATE TABLE Menu (
 );
 ```
 
-#### **3️⃣ `OrderTable`** (Stores order details)
+#### **4️⃣ `OrderTable`** (Stores order details)
 ```sql
 CREATE TABLE OrderTable (
     OrderId VARCHAR(20) PRIMARY KEY,
@@ -174,7 +234,7 @@ CREATE TABLE OrderTable (
 
 ```
 
-#### **4️⃣ `OrderItem`** (Stores OrderItem)
+#### **5️⃣ `OrderItem`** (Stores OrderItem)
 ```sql
 CREATE TABLE OrderItem (
     OrderItemId INT PRIMARY KEY AUTO_INCREMENT,
@@ -188,7 +248,7 @@ CREATE TABLE OrderItem (
 );
 ```
 
-#### **4️⃣ `OrderHistory`** (Stores OrderHistory)
+#### **6️⃣ `OrderHistory`** (Stores OrderHistory)
 ```sql
 CREATE TABLE OrderHistory (
     OrderHistoryID INT AUTO_INCREMENT PRIMARY KEY,
@@ -207,7 +267,6 @@ CREATE TABLE OrderHistory (
 ```
 
 ---
-
 ## 🛠️ Technologies Used
 ✅ **Backend:** Java (JDBC, Servlets, JSP)  
 ✅ **Frontend:** HTML, CSS, JavaScript, Bootstrap, jQuery  

@@ -1,5 +1,5 @@
 # ---------- Stage 1: Build the WAR file using Maven ----------
-FROM maven:3.9.6-eclipse-temurin-17 AS build
+FROM maven:3.8.5-openjdk-8 AS build
 
 # Set working directory inside the container
 WORKDIR /app
@@ -12,7 +12,7 @@ RUN mvn clean package -DskipTests
 
 
 # ---------- Stage 2: Deploy the WAR file to Tomcat ----------
-FROM tomcat:9.0.107-jdk17-temurin
+FROM tomcat:9.0-jdk8
 
 # Remove the default ROOT application
 RUN rm -rf /usr/local/tomcat/webapps/ROOT

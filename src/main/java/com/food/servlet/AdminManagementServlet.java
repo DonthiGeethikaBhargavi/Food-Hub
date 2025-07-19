@@ -31,11 +31,18 @@ public class AdminManagementServlet extends HttpServlet {
 
         try {
             switch (action) {
-                case "addAdmin"   -> addAdmin(req);
-                case "editAdmin"  -> editAdmin(req);
-                case "deleteAdmin"-> deleteAdmin(req);
-                default           -> System.out.println("⚠️ Unknown action: " + action);
-            }
+    case "addAdmin":
+        addAdmin(req);
+        break;
+    case "editAdmin":
+        editAdmin(req);
+        break;
+    case "deleteAdmin":
+        deleteAdmin(req);
+        break;
+    default:
+        System.out.println("⚠️ Unknown action: " + action);
+}
         } catch (Exception e) {
             e.printStackTrace();   // you may log this instead
         }

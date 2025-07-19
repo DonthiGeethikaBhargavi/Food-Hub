@@ -1,0 +1,142 @@
+/* General Page Styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Menu Header */
+h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Menu List */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Menu Item */
+.menu-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
+}
+
+/* Menu Image */
+.menu-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid #ddd;
+}
+
+/* Menu Details */
+.menu-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Price */
+.price {
+    font-size: 18px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/* Quantity Input */
+.quantity {
+    width: 80px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #218838;
+}
+
+/* Item Added Popup */
+.item-added-popup {
+    position: fixed;
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(-50%);
+    background: rgba(40, 167, 69, 0.9);
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.item-added-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* View Cart Button */
+.view-cart {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    background: #ff9800;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.view-cart.hidden {
+    display: none;
+}
+
+.view-cart:hover {
+    background: #ffcc80;
+}

@@ -22,8 +22,14 @@ jobs:
     - name: Build with Maven
       run: mvn clean package -DskipTests
 
-    - name: Upload WAR file
+    - name: Rename WAR to ROOT.war (for Render deployment)
+      run: |
+        WAR_FILE=$(ls target/*.war | head -n 1)
+        echo "Found WAR file: $WAR_FILE"
+        mv "$WAR_FILE" target/ROOT.war
+
+    - name: Upload WAR file (ROOT.war)
       uses: actions/upload-artifact@v4
       with:
-        name: FoodHub-WAR
-        path: target/*.war
+        name: ROOT-WAR
+        path: target/ROOT.war

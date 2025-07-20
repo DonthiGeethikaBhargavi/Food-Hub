@@ -1,5 +1,6 @@
 package com.food.servlet;
-
+import com.food.utility.HashUtil;
+import java.nio.charset.StandardCharsets;
 import java.io.IOException;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
@@ -88,18 +89,19 @@ public class SignupServlet extends HttpServlet {
         response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "GET method is not supported for signup.");
     }
     private String hashPassword(String password) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            byte[] hash = md.digest(password.getBytes());
-            StringBuilder hex = new StringBuilder();
-            for (byte b : hash) {
-                hex.append(String.format("%02x", b));
-            }
-            return hex.toString();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return password; // fallback (not recommended)
+    try {
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        byte[] hash = md.digest(password.getBytes(StandardCharsets.UTF_8)); // 
+        StringBuilder hex = new StringBuilder();
+        for (byte b : hash) {
+            hex.append(String.format("%02x", b));
         }
+        return hex.toString();
+    } catch (Exception e) {
+        e.printStackTrace();
+        return password; // fallback (not recommended)
     }
+}
+
 
 }

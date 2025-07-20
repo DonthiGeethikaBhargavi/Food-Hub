@@ -31,6 +31,7 @@ public class UserDAOImpl implements UserDAO {
             stmt.setString(5, user.getPhone());
             stmt.setString(6, user.getAddress());
             stmt.setString(7, user.getRole());
+            System.out.println("🔐 Hashed password saved: " + hashedPassword);
 
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -46,6 +47,11 @@ public class UserDAOImpl implements UserDAO {
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     String storedHashedPassword = rs.getString("Password");
+                    System.out.println("🔑 Username: " + username);
+                  System.out.println("Entered Password: " + password);
+                 System.out.println("Hashed Entered Password: " + hashPassword(password));
+                 System.out.println("Stored Hashed Password from DB: " + storedHashedPassword);
+
                     return storedHashedPassword.equals(hashPassword(password)); // Compare hashed passwords
                 }
             }

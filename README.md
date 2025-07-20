@@ -11,6 +11,56 @@
   <img src="https://i.pinimg.com/originals/a0/99/5a/a0995a974b6c6a0d48fbdcc41d6c28a6.gif" height="50" style="vertical-align: middle; margin: 0 10px;" alt="Juice" />
 </p>
 
+<br/>
+
+---
+
+## 🚀 Live Demo – Taste the Tech!
+
+<div align="center">
+
+🍽️ **Craving something delicious?**  
+FoodHub is your ultimate flavor portal – where spicy biryanis, cheesy pizzas, and tasty treats await. 🌶️🧀🍱  
+Click below and let the hunger games begin! 😋🔥
+
+<br/>
+
+<img src="https://github.com/DonthiGeethikaBhargavi/Food-Hub/blob/main/src/main/webapp/images/burger.gif?raw=true" alt="Delicious Burger GIF" height="100" style="border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); margin-bottom: 20px;" />
+
+<br/>
+
+<a href="https://food-hub-cs1v.onrender.com/Home" target="_blank" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #FF6347, #FF4500); color: white; font-size: 1.2em; font-weight: 600; border-radius: 30px; text-decoration: none; box-shadow: 0 8px 20px rgba(255, 99, 71, 0.3); transition: all 0.3s ease;">
+🍔 Visit FoodHub Live – Order Now!
+</a>
+
+<br/><br/>
+
+<i>🚚 Seamless ordering • 😋 Delicious meals • 💳 Secure checkout</i>
+
+<br/><br/>
+
+<b>🧪 Try It Out – Demo Credentials:</b><br/><br/>
+
+👤 <b>Customer</b>  
+Username: <code>emmasmith</code>  
+Password: <code>securepass</code>  
+
+<br/>
+
+👨‍🍳 <b>Restaurant Owner</b>  
+Username: <code>oliviab</code>  
+Password: <code>oliviapass</code>  
+
+<br/>
+
+🛡️ <b>Admin</b>  
+Username: <code>sophiaa</code>  
+Password: <code>sophiapass</code>  
+
+</div>
+
+---
+
 ## 🚀 Overview
 
 **Food Hub** is a full-stack web application that offers a seamless and intuitive online food ordering experience. It enables customers to explore restaurants, view digital menus, add items to a cart, place secure orders, and track their order history — all in one place.

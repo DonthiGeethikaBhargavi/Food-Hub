@@ -90,6 +90,12 @@
                 <% } %>
             </tbody>
         </table>
+<% out.println("Orders list size: " + (orders == null ? "null" : orders.size())); %>
+<% if (orders != null) {
+    for (Order o : orders) {
+        out.println("OrderID: " + o.getOrderId() + " - Status: " + o.getStatus() + "<br>");
+    }
+} %>
 
         <h4 class="text-success mt-5"><i class="fas fa-receipt"></i> Recent Orders</h4>
         <table class="table table-bordered">

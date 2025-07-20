@@ -69,6 +69,7 @@
             </div>
         </div>
     </nav>
+<% out.println("Debug - Restaurant ID: " + restaurant.getRestaurantId()); %>
 
     <div class="container dashboard">
         <h2 class="mb-4"><i class="fas fa-store"></i> Welcome, <%= user.getName() %> (Owner of <%= restaurant.getName() %>)</h2>

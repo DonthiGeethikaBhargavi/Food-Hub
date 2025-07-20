@@ -28,6 +28,7 @@
     <link rel="icon" type="image/png" href="images/FoodHubLogo.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 <body>
@@ -105,7 +106,8 @@
                             </div>
 
                             <div class="text-center">
-                                <button type="submit" id="place-order-btn" class="btn btn-success btn-lg">Place Order</button>
+                                <button type="button" id="place-order-btn" class="btn btn-success btn-lg">Place Order</button>
+
                             </div>
 
                         </form>
@@ -138,5 +140,51 @@
 </script>
 <script src="checkout.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById("place-order-btn").addEventListener("click", function () {
+        const paymentMode = document.getElementById("payment-mode").value;
+
+        if (paymentMode === "Cash") {
+            // Submit form normally
+            document.getElementById("checkout-form").submit();
+        } else {
+            // Online Payment using Razorpay
+            const amount = <%= (int)(grandTotal * 100) %>; // In paise
+
+            const options = {
+                "key": "rzp_test_1DP5mmOlF5G5ag", // Test API Key
+                "amount": amount,
+                "currency": "INR",
+                "name": "FoodHub",
+                "description": "Order Payment",
+                "handler": function (response) {
+                    // On success, append hidden input and submit form
+                    const form = document.getElementById("checkout-form");
+
+                    const razorpayPaymentIdInput = document.createElement("input");
+                    razorpayPaymentIdInput.type = "hidden";
+                    razorpayPaymentIdInput.name = "razorpay_payment_id";
+                    razorpayPaymentIdInput.value = response.razorpay_payment_id;
+
+                    form.appendChild(razorpayPaymentIdInput);
+                    form.submit();
+                },
+                "prefill": {
+                    "name": document.getElementById("name").value,
+                    "email": "<%= user != null ? user.getEmail() : "test@example.com" %>",
+                    "contact": document.getElementById("phone").value
+                },
+                "theme": {
+                    "color": "#198754"
+                }
+            };
+
+            const rzp = new Razorpay(options);
+            rzp.open();
+        }
+    });
+</script>
+
 </body>
 </html>

@@ -30,6 +30,7 @@ public class OrderConfirmationServlet extends HttpServlet {
         Restaurant restaurant = (Restaurant) session.getAttribute("restaurant");
         Double totalAmount = (Double) session.getAttribute("grandTotal");
         String paymentMode = request.getParameter("paymentMode");
+        String razorpayPaymentId = request.getParameter("razorpay_payment_id");
 
         Cart cart = (Cart) session.getAttribute("cart");
 
@@ -51,6 +52,14 @@ public class OrderConfirmationServlet extends HttpServlet {
             order.setStatus("Pending");
             order.setPaymentMode(paymentMode);
 
+            if (razorpayPaymentId != null) {
+             System.out.println("✅ Razorpay Payment Successful. ID: " + razorpayPaymentId);
+            order.setStatus("Paid");
+           } else {
+                 System.out.println("🟡 Cash on Delivery or No Razorpay ID.");
+            }
+
+            
             OrderDAO orderDAO = new OrderDAOImpl();
             orderDAO.addOrder(order);
 

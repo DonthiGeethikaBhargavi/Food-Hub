@@ -369,7 +369,6 @@ CREATE TABLE OrderHistory (
 ---
 
 ## 🚀 Future Enhancements
-- 🔹 **Real Payment Gateway Integration:** Integrate with a service like Stripe or Razorpay for actual transaction processing.
 - 🔹 **User Reviews & Ratings:** Allow users to rate and review restaurants and menu items.
 - 🔹 **Live Order Tracking:** A map-based interface to track the delivery agent's location in real-time. 🚴
 - 🔹 **Coupon & Discount System:** Implement functionality for applying promotional codes at checkout.

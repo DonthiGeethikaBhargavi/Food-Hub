@@ -159,7 +159,7 @@ public class OrderDAOImpl implements OrderDAO {
     }
     private static final String GET_ORDERS_BY_RESTAURANT_ID =
             "SELECT OrderId, UserId, RestaurantId, OrderDate, TotalAmount, Status, PaymentMode " +
-            "FROM ordertable WHERE RestaurantId = ? ORDER BY OrderDate DESC";
+            "FROM OrderTable WHERE RestaurantId = ? ORDER BY OrderDate DESC";
 
         @Override
         public List<Order> getOrdersByRestaurantId(int restaurantId) {
@@ -192,7 +192,7 @@ public class OrderDAOImpl implements OrderDAO {
         }
         @Override
         public void updateOrderStatus(String orderId, String newStatus) {
-            String sql = "UPDATE ordertable SET status = ? WHERE orderId = ?";
+            String sql = "UPDATE OrderTable SET status = ? WHERE orderId = ?";
             try (Connection conn = DBConnection.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(sql)) {
 

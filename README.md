@@ -20,8 +20,9 @@
 <div align="center">
 
 🍽️ **Craving something delicious?**  
-FoodHub is your ultimate flavor portal – where spicy biryanis, cheesy pizzas, and tasty treats await. 🌶️🧀🍱  
+FoodHub is your ultimate flavor portal – where cheesy pizzas, juicy burgers, creamy pastas, and global treats await. 🍕🍔🍝🍣  
 Click below and let the hunger games begin! 😋🔥
+
 
 <br/>
 

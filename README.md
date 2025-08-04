@@ -234,7 +234,7 @@ CREATE TABLE User (
     Role ENUM('Customer', 'RestaurantAdmin', 'SystemAdmin') NOT NULL,
     CreatedDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     LastLoginDate TIMESTAMP NULL,
-    Restaurant_Id INT NULL;
+    Restaurant_Id INT NULL
 );
 ```
 

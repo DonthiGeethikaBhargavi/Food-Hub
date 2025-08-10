@@ -324,7 +324,7 @@ CREATE TABLE OrderHistory (
 ✅ **Frontend:** HTML, CSS, JavaScript, Bootstrap, jQuery  
 ✅ **Database:** MySQL  
 ✅ **Web Server:** Apache Tomcat
-✅ ** Design Pattern:** Data Access Object (DAO)  
+✅ **Design Pattern:** Data Access Object (DAO)  
 
 ---
 

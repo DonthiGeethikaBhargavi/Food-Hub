@@ -346,10 +346,7 @@ CREATE TABLE OrderHistory (
    ```sql
    CREATE DATABASE foodhub;
    ```
-   Import the schema using:
-   ```sh
-   mysql -u root -p foodhub < database_schema.sql
-   ```
+
 4. Update database credentials in `DBConnection.java`.
 5. Deploy on **Apache Tomcat**.
 6. Open the browser and go to:
